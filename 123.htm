@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<h1 style="color:blue;">Hoshimachi Suisei</h1>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwIpKuH1kblXQnHb4wm65rnxSYnTfliU1LQ&s" style="max-width:100%;height:auto;">
+
+<video width="320" height="240" autoplay muted>
+  <source src="ムーンライト _ 星街すいせい(official).mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div id="myPlot" style="width:100%;max-width:700px;"></div>
+
+<script>
+// Date and subscriber data
+const xArray = [
+  '2020-01-31', '2020-04-05', '2020-06-02', '2020-09-27', '2020-11-30',
+  '2021-01-16', '2021-03-09', '2021-05-13', '2021-06-26', '2021-08-17', '2021-10-28',
+  '2022-01-07', '2022-03-31', '2022-05-11', '2022-06-16',
+  '2023-01-20', '2023-03-09', '2023-06-13', '2023-09-27',
+  '2024-02-25', '2024-04-13', '2024-06-10', '2024-07-25', '2024-10-16'
+];
+const yArray = [
+  100, 200, 300, 500, 600, 
+  700, 800, 900, 1000, 1100, 1200,
+  1300, 1400, 1500, 1600, 
+  1700, 1800, 1900, 2000, 
+  2100, 2200, 2300, 2400, 2500
+];
+
+// Define Data
+const data = [{
+  x: xArray,
+  y: yArray,
+  mode: "lines+markers",
+  type: "scatter",
+  marker: {color: 'blue'}
+}];
+
+// Define Layout
+const layout = {
+  xaxis: {title: "Date"},
+  yaxis: {title: "Subscribers (in 10,000s)"},
+  title: "Subscriber Growth Over Time",
+  autosize: true
+};
+
+// Display using Plotly
+Plotly.newPlot("myPlot", data, layout, {responsive: true});
+</script>
+
+<p><a href="http://120.113.75.117/">41343135</a></p>
+
+</body>
+</html>
